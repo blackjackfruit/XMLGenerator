@@ -12,6 +12,10 @@ import XMLGenerator
 
 class XMLGeneratorTests: XCTestCase {
     
+    /**
+    Due to Swift not having try-catch and not offering the ability to use XCTAssert macros, this current state of testing will have to do
+    */
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -27,17 +31,17 @@ class XMLGeneratorTests: XCTestCase {
         let xml = XMLGenerator(ver: 1.0, encode: "UTF-8");
         xml.tag("Library");
         xml.tagAttributes(["address":"0000 Candy Land Drive"]);xml.end()
-            xml.tag("catalog")
-                xml.tag("book")
-                xml.tagAttributes(["id":"0000"])
-                    xml.tag("author")
-                    xml.addElement("Steven King") //The closing tag is automatically added
-                xml.endTag()
-                xml.tag("book")
-                xml.tagAttributes(["id":"0001"])
-                    xml.tag("author")
-                    xml.addElement("Paulo Coehlo") //The closing tag is automatically added
-                xml.endTag()
+        xml.tag("catalog")
+            xml.tag("book")
+            xml.tagAttributes(["id":"0000"])
+                xml.tag("author")
+                xml.addElement("Steven King") //The closing tag is automatically added
+            xml.endTag()
+            xml.tag("book")
+            xml.tagAttributes(["id":"0001"])
+                xml.tag("author")
+                xml.addElement("Paulo Coehlo") //The closing tag is automatically added
+            xml.endTag()
         xml.endTag()
         
         let out = xml.output()
@@ -46,11 +50,21 @@ class XMLGeneratorTests: XCTestCase {
     
     func testEmptyTagName()
     {
-        let xml = XMLGenerator()
-        xml.tag("")
-        xml.endTag()
-        let out = xml.output()
-        println(out)
+//        let xml = XMLGenerator()
+//        xml.tag("") // should fail here
+//        xml.endTag()
+//        let out = xml.output()
+//        println(out)
+    }
+    
+    func testAssertionWithEnd()
+    {
+//        let xml = XMLGenerator()
+//        xml.tag("tag")
+//        xml.end()
+//        xml.end() // Should fail here
+//        let out = xml.output()
+//        println(out)
     }
     
     func testPerformanceExample() {
