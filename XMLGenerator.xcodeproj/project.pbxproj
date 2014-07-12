@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11E23981970C3A2008FF65A /* XMLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E23971970C3A2008FF65A /* XMLGenerator.swift */; };
+		D11E23B11970C8B9008FF65A /* XMLGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E23B01970C8B9008FF65A /* XMLGeneratorTests.swift */; };
+		D11E23B51970C922008FF65A /* XMLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E23971970C3A2008FF65A /* XMLGenerator.swift */; };
 		D1E6E1241970C321001FB384 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6E1231970C321001FB384 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +26,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D11E23971970C3A2008FF65A /* XMLGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLGenerator.swift; sourceTree = "<group>"; };
+		D11E23AC1970C8B9008FF65A /* XMLGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11E23AF1970C8B9008FF65A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D11E23B01970C8B9008FF65A /* XMLGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLGeneratorTests.swift; sourceTree = "<group>"; };
 		D1E6E1201970C321001FB384 /* XMLGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XMLGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E6E1231970C321001FB384 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D11E23A91970C8B9008FF65A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1E6E11D1970C321001FB384 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +52,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D11E23AD1970C8B9008FF65A /* XMLGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D11E23B01970C8B9008FF65A /* XMLGeneratorTests.swift */,
+				D11E23AE1970C8B9008FF65A /* Supporting Files */,
+			);
+			path = XMLGeneratorTests;
+			sourceTree = "<group>";
+		};
+		D11E23AE1970C8B9008FF65A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D11E23AF1970C8B9008FF65A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D1E6E1171970C321001FB384 = {
 			isa = PBXGroup;
 			children = (
 				D1E6E1221970C321001FB384 /* XMLGenerator */,
+				D11E23AD1970C8B9008FF65A /* XMLGeneratorTests */,
 				D1E6E1211970C321001FB384 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E6E1201970C321001FB384 /* XMLGenerator */,
+				D11E23AC1970C8B9008FF65A /* XMLGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				D1E6E1231970C321001FB384 /* main.swift */,
+				D11E23971970C3A2008FF65A /* XMLGenerator.swift */,
 			);
 			path = XMLGenerator;
 			sourceTree = "<group>";
@@ -65,6 +99,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D11E23AB1970C8B9008FF65A /* XMLGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D11E23B21970C8B9008FF65A /* Build configuration list for PBXNativeTarget "XMLGeneratorTests" */;
+			buildPhases = (
+				D11E23A81970C8B9008FF65A /* Sources */,
+				D11E23A91970C8B9008FF65A /* Frameworks */,
+				D11E23AA1970C8B9008FF65A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMLGeneratorTests;
+			productName = XMLGeneratorTests;
+			productReference = D11E23AC1970C8B9008FF65A /* XMLGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D1E6E11F1970C321001FB384 /* XMLGenerator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1E6E1271970C321001FB384 /* Build configuration list for PBXNativeTarget "XMLGenerator" */;
@@ -91,6 +142,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = yellokrow;
 				TargetAttributes = {
+					D11E23AB1970C8B9008FF65A = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					D1E6E11F1970C321001FB384 = {
 						CreatedOnToolsVersion = 6.0;
 					};
@@ -109,22 +163,75 @@
 			projectRoot = "";
 			targets = (
 				D1E6E11F1970C321001FB384 /* XMLGenerator */,
+				D11E23AB1970C8B9008FF65A /* XMLGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D11E23AA1970C8B9008FF65A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		D11E23A81970C8B9008FF65A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11E23B11970C8B9008FF65A /* XMLGeneratorTests.swift in Sources */,
+				D11E23B51970C922008FF65A /* XMLGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1E6E11C1970C321001FB384 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D1E6E1241970C321001FB384 /* main.swift in Sources */,
+				D11E23981970C3A2008FF65A /* XMLGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		D11E23B31970C8B9008FF65A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XMLGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D11E23B41970C8B9008FF65A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XMLGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D1E6E1251970C321001FB384 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -217,6 +324,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D11E23B21970C8B9008FF65A /* Build configuration list for PBXNativeTarget "XMLGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D11E23B31970C8B9008FF65A /* Debug */,
+				D11E23B41970C8B9008FF65A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D1E6E11B1970C321001FB384 /* Build configuration list for PBXProject "XMLGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -233,6 +348,7 @@
 				D1E6E1291970C321001FB384 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
