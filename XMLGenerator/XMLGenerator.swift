@@ -32,6 +32,18 @@ class XMLGenerator {
         tags.append(tagName)
     }
     
+    func tag(tagName: NSString, attributes: NSDictionary) {
+        tag(tagName)
+        tagAttributes(attributes)
+    }
+    
+    func tag(tagName: NSString, attributes: NSDictionary, contentBlock: ()->()) {
+        tag(tagName)
+        tagAttributes(attributes)
+        contentBlock()
+        endTag()
+    }
+    
     func tagAttributes(attributes:NSDictionary)
     {
         var tempXMLAttributes: NSMutableString = ""
