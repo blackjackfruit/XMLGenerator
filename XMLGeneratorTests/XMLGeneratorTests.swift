@@ -47,6 +47,25 @@ class XMLGeneratorTests: XCTestCase {
         let out = xml.output()
         println(out);
     }
+    func testBasicStructureWithBlocks()
+    {
+        let xml = XMLGenerator(ver: 1.0, encode: "UTF-8");
+        xml.tag("Library");
+        xml.tagAttributes(["address":"0000 Candy Land Drive"]);xml.end()
+        xml.tag("catalog") {
+            xml.tag("book", attributes: ["id":"0000"])
+            xml.tag("author") {
+                xml.addElement("Steven King")
+            }
+            xml.tag("book", attributes: ["id":"0001"])
+            xml.tag("author") {
+                xml.addElement("Paulo Coehlo") //The closing tag is automatically added
+            }
+        }
+        
+        let out = xml.output()
+        println(out);
+    }
     
     func testEmptyTagName()
     {
