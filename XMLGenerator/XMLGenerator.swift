@@ -37,6 +37,12 @@ class XMLGenerator {
         tagAttributes(attributes)
     }
     
+    func tag(tagName: NSString, contentBlock: ()->()) {
+        tag(tagName)
+        contentBlock()
+        endTag()
+    }
+    
     func tag(tagName: NSString, attributes: NSDictionary, contentBlock: ()->()) {
         tag(tagName)
         tagAttributes(attributes)
